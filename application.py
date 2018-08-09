@@ -1,8 +1,8 @@
-from rutetider import Timetable, UserPosition, Subscribers, CurrentDates
+#from rutetider import Timetable, UserPosition, Subscribers, CurrentDates
 #from additional_data import token, database_url
-from display_schedule import display_schedule
-from reply_keyboard_markups import Keyboard
-import message_handler_groups
+#from display_schedule import display_schedule
+#from reply_keyboard_markups import Keyboard
+#import message_handler_groups
 from flask import Flask, request
 import datetime
 import telebot
@@ -25,7 +25,7 @@ def handle_text(message):
     bot.send_message(message.from_user.id, 'Выберите пункт меню:', reply_markup=user_markup)
 
 
-@bot.message_handler(func=lambda mess: "Главное меню" == mess.text, content_types=['text'])
+'''@bot.message_handler(func=lambda mess: "Главное меню" == mess.text, content_types=['text'])
 def handle_text(message):
     keyboard.main_menu(message)
 
@@ -182,7 +182,7 @@ def handle_text(message):
         faculty, course = UserPosition(database_url).get_faculty_and_course(str(message.chat.id))
         groups_list = Timetable(database_url).get_all_groups(faculty, course)
         groups_list.sort()
-        keyboard.group_list_by_faculty_and_group(groups_list, message)
+        keyboard.group_list_by_faculty_and_group(groups_list, message)'''
 
 
 @server.route('/' + token, methods=['POST'])
