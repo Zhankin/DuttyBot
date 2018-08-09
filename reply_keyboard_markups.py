@@ -1,4 +1,4 @@
-from additional_data import faculty_list
+#from additional_data import faculty_list
 import telebot
 
 
