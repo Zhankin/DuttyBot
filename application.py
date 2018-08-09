@@ -12,7 +12,7 @@ database_url='123123'
 server = Flask(__name__)
 
 bot = telebot.TeleBot(token)
-keyboard = Keyboard(bot)
+#keyboard = Keyboard(bot)
 
 
 @bot.message_handler(commands=['start'])
