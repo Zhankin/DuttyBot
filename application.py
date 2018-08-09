@@ -8,6 +8,7 @@ import datetime
 import telebot
 import os
 token='672654914:AAEQ7lJ38ZJWQzTQk--Faj_ngP4NxdZBovM'
+database_url='123123'
 server = Flask(__name__)
 
 bot = telebot.TeleBot(token)
