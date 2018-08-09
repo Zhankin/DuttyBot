@@ -1,4 +1,4 @@
-from additional_data import group_list, schedule_url, database_url
+#from additional_data import group_list, schedule_url, database_url
 from rutetider import Timetable
 from bs4 import BeautifulSoup
 import requests
