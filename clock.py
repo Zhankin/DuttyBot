@@ -1,7 +1,7 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 from requests_to_schedule import parsing_timetable
 from rutetider import Timetable, CurrentDates
-from additional_data import database_url
+#from additional_data import database_url
 import datetime
 
 
