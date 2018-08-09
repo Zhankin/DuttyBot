@@ -193,7 +193,7 @@ def get_message():
 @server.route("/")
 def web_hook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://glacial-lowlands-23073.herokuapp.com/' + token)
+    bot.set_webhook(url='https://notifykz.herokuapp.com/' + token)
     return "CONNECTED", 200
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
