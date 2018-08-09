@@ -7,7 +7,7 @@ from flask import Flask, request
 import datetime
 import telebot
 import os
-
+token='672654914:AAEQ7lJ38ZJWQzTQk--Faj_ngP4NxdZBovM'
 server = Flask(__name__)
 
 bot = telebot.TeleBot(token)
