@@ -197,4 +197,4 @@ def web_hook():
     bot.set_webhook(url='https://notifykz.herokuapp.com/' + token)
     return "CONNECTED", 200
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT')
+server.run(host="0.0.0.0", port=os.environ.get('PORT'))
