@@ -7,7 +7,8 @@ from flask import Flask, request
 import datetime
 import telebot
 import os
-token='672654914:AAEQ7lJ38ZJWQzTQk--Faj_ngP4NxdZBovM'
+token=os.environ.get('TOKEN', None)
+app_name=os.environ.get('APP_NAME', None)
 database_url='123123'
 server = Flask(__name__)
 
@@ -195,7 +196,7 @@ def get_message():
 @server.route("/")
 def web_hook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://notifykz.herokuapp.com/' + token)
+    bot.set_webhook(url='https://'+app_name+'.herokuapp.com/' + token)
     return "CONNECTED", 200
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT'))
