@@ -9,6 +9,7 @@ import telebot
 import os
 token=os.environ.get('TOKEN', None)
 app_name=os.environ.get('APP_NAME', None)
+test=os.environ.get('TEST_NAME', None)
 database_url='123123'
 server = Flask(__name__)
 
@@ -29,7 +30,8 @@ def handle_text(message):
 @bot.message_handler(func=lambda mess: "Главное меню" == mess.text, content_types=['text'])
 def handle_text(message):
     #keyboard.main_menu(message)
-    bot.send_sticker(message.chat.id, 'BQADAgADOwADTnfcEXgpqbcHcL3wAg')
+    #bot.send_sticker(message.chat.id, 'BQADAgADOwADTnfcEXgpqbcHcL3wAg')
+    bot.send_message(message.from_user.id, str(test))
 
 
 '''@bot.message_handler(func=lambda mess: "Время пар" == mess.text, content_types=['text'])
